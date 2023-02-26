@@ -60,7 +60,7 @@ int main()
         m.setInfo(surname, group, account, account_type);
         m.getInfo();
         
-        cout << "\n\tIf you want enter about one more user press 0, if not press 1" << endl;
+        cout << "\n\t||If you want to enter about one more user press 0, if not press 1" << endl << "\t";
         cin >> exit;
     }
 
