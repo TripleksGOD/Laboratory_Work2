@@ -1,0 +1,70 @@
+#include <iostream>
+
+using namespace std;
+
+class Info
+{
+private:
+    string surname;
+    string group;
+    string account;
+    string account_type;
+public:
+    
+    void Message()
+    {
+        cout << "\n\t||Local network users\n\n";
+    }
+    
+    void setInfo(string info_surname, string info_group, string info_account, string info_account_type)
+    {
+        surname = info_surname;
+        group = info_group;
+        account = info_account;
+        account_type = info_account_type;
+    }
+    
+    void getInfo()
+    {
+        cout << "\n\t||Infomation: \n";
+        cout << "\t||Surname: " << surname << endl;
+        cout << "\t||Group: " << group << endl;
+        cout << "\t||Account: " << account << endl;;
+        cout << "\t||Account type" << account_type;
+    }
+
+};
+
+int main()
+{
+    bool exit = false;
+    while (!exit)
+    {
+        string surname, group, account, account_type;
+        cout << "\n\t||Enter information about user: surname, group, account, account type\n\n";
+
+        cout << "\t||Surname: ";
+        cin >> surname;
+
+        cout << "\t||Group: ";
+        cin >> group;
+
+        cout << "\t||Account: ";
+        cin >> account;
+
+        cout << "\t||Account type: ";
+        cin >> account_type;
+
+        Info m;
+        m.Message();
+        m.setInfo(surname, group, account, account_type);
+        m.getInfo();
+        
+        cout << "\nIf you want enter about one more user press 0, if not press 1" << endl;
+        cin >> exit;
+    }
+
+    cout << endl;
+    system("pause");
+    return 0;
+}
